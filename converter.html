@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Distance Converter</title>
+		<link rel="stylesheet" href="converter.css" />
+		<meta name="viewport" content="width=display-width, initial-scale=1"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+		<h2>Distance Converter</h2>
+		
+		<div>
+			<h3>Inches and Centimetres</h3>
+			<p>
+				<label>Inches</label>
+			 	<input id="inputInches" min="0" type="number" placeholder="Inches" oninput="centimetresInches(this.value)" onchange="centimetresInches(this.value)">
+			</p>
+			<p>
+				</label>Centimetres</label> 
+				<input id="inputCentimetres" min="0" type="number" placeholder="Centimetres" oninput="inchesCentimetres(this.value)" onchange="inchesCentimetres(this.value)">
+			</p
+		</div> 
+<hr/>
+		<div>
+			<h3>Feet and Metres</h3>
+			<p>
+				</label>Feet</label> 
+				<input id="inputFeet" min="0" type="number" placeholder="Feet" oninput="metresFeet(this.value)" onchange="metresFeet(this.value)">
+			</p>
+			<p>
+				</label>Metres</label> 
+				<input id="inputMetres" min="0" type="number" placeholder="Metres" oninput="feetMetres(this.value)" onchange="feetMetres(this.value)">
+			</p>
+		</div>
+<hr/>
+		<div>
+			<h3>Miles and Kilometres</h3>
+			<p>
+				</label>Miles</label> 
+				<input id="inputMiles" min="0" type="number" placeholder="Miles" oninput="kilometresMiles(this.value)" onchange="kilometresMiles(this.value)">
+			</p>
+			<p>
+				</label>Kilometres</label> 
+				<input id="inputKilometres" min="0" type="number" placeholder="Kilometres" oninput="milesKilometres(this.value)" onchange="milesKilometres(this.value)">
+			</p>
+		</div>
+
+		<script>
+		function inchesCentimetres(valNum) {
+		  document.getElementById("inputInches").value =valNum/2.54;
+		}
+		function centimetresInches(valNum) {
+		  document.getElementById("inputCentimetres").value =valNum*2.54;
+		}
+
+		function feetMetres(valNum) {
+		 	document.getElementById("inputFeet").value =valNum*3.281;
+		}
+		function metresFeet(valNum) {
+		  document.getElementById("inputMetres").value =valNum/3.281;
+		}
+
+		function milesKilometres(valNum) {
+		  document.getElementById("inputMiles").value =valNum/1.609;
+		}
+		function kilometresMiles(valNum) {
+		  document.getElementById("inputKilometres").value =valNum*1.609;
+		}
+		</script>
+
+	</body>
+</html>
